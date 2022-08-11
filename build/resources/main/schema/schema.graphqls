@@ -1,0 +1,12 @@
+type Query {
+    fetchShellInfo(offerId: String, rateCardId: String): [ShellInfo]
+}
+
+type ShellInfo {
+    offerName: String
+    offerId: String
+    rateCardId: String
+    dateAdded: Int
+}
+directive @skipcodegen on FIELD_DEFINITION
+directive @uppercase on FIELD_DEFINITION
